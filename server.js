@@ -5,7 +5,7 @@ var express = require('express');
 //var app express library called as a function and no args.
 var app = express();
 //heroku
-const PORT =process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 //tell it which folder u want to serve
 //app.use add functionality to ur express apps
 //express.static is gonna specify a folder name u want to expose to the server
@@ -27,14 +27,3 @@ app.listen(PORT,function(){
   console.log('express server is up on PORT ' + PORT);
 });
 //in the root of the app create the public folder--helloReact
-//inde
-
-//common pattern for express middleware
-app.use(function(req, res, next){
-  if (req.headers['x-forwarded-proto'] === 'htto'){
-    next();
-  } else {
-    res.redirect('http://' + req.hostname + req.url);
-  }
-});
-x.html is the default for the app
