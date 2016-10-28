@@ -24,7 +24,7 @@ app.use(express.static('public'));
 //now start the server
 //app.listen takes 2 args first PORT and then the fn to call once the server is up.
 app.listen(PORT,function(){
-  console.log('express server is up on PORT ' + port);
+  console.log('express server is up on PORT ' + PORT);
 });
 //in the root of the app create the public folder--helloReact
 //inde
