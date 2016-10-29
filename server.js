@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3000;
 
 //open weather maps only operates on http not https on free version
 //so we r gonna redirect all https traffic over http.
-//needs to be above app.use on line 32. 
+//needs to be above app.use on line 32.
 //common pattern for => express middleware =>lets u dosomething with every request
 //req => the request that comes in for the file might be index.html or bundle.js
 //res => response update what gets sent back
@@ -22,10 +22,10 @@ const PORT = process.env.PORT || 3000;
 //if it is great we can all next n move on
 //is it isnt redirect them
 app.use(function(req, res, next){
-  if (req.headers['x-forwarded-proto'] === 'http'){
-    next();
+  if (req.headers['x-forwarded-proto'] === 'https'){
+  res.redirect('http://' + req.hostname + req.url);
   } else {
-    res.redirect('http://' + req.hostname + req.url);
+      next();
   }
 });
 
