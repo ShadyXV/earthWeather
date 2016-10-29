@@ -21,7 +21,7 @@ var React = require('react');
 //es6 destructruing inside arguments.
 var WeatherUpdate = ({temp, location}) =>{
   return (
-    <p>Its {temp}c in {location}</p>
+    <h3 className="text-center">Its {temp} c in {location}</h3>
   );
 }
 module.exports = WeatherUpdate;
