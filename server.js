@@ -11,7 +11,16 @@ const PORT = process.env.PORT || 3000;
 //express.static is gonna specify a folder name u want to expose to the server
 //in this case public is the folder
 
-//common pattern for express middleware
+//open weather maps only operates on http not https on free version
+//so we r gonna redirect all https traffic over http.
+//needs to be above app.use on line 32. 
+//common pattern for => express middleware =>lets u dosomething with every request
+//req => the request that comes in for the file might be index.html or bundle.js
+//res => response update what gets sent back
+//next=> we call it when the middleware is done
+//all we do here is see if the traffic is over http
+//if it is great we can all next n move on
+//is it isnt redirect them
 app.use(function(req, res, next){
   if (req.headers['x-forwarded-proto'] === 'http'){
     next();
