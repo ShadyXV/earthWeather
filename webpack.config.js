@@ -30,7 +30,8 @@ module.exports = {
       Loc:'app/components/LocInput.jsx',
       WeatherUpdate:'app/components/WeatherUpdate.jsx',
       Openweathermap:'app/api/openweathermap.jsx',
-      ErrorModal:'app/components/ErrorModal.jsx'
+      ErrorModal:'app/components/ErrorModal.jsx',
+      appStyles:'app/styles/app.css'
     },
     extensions: ["",".js","jsx"]
   },

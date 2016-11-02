@@ -14,7 +14,7 @@ var Loc = React.createClass({
   render:function(){
     return (
       <form onSubmit={this.onFormSubmit}>
-        <input type='text' placeholder='Enter Location' ref="location"/>
+        <input type='search' placeholder='Search Weather By City' ref="location"/>
         <button className="button expanded hollow">Get Weather</button>
     </form>
     );
